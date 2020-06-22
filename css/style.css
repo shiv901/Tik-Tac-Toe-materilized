@@ -175,14 +175,10 @@ h1 {
   html {
     font-size: 45%;
   }
-  .container {
-    margin-top: 10rem;
-  }
-  .container h1 {
-    font-size: 5rem;
-    padding: 3rem 0;
-  }
-  .container ul li {
-    padding: 7rem;
+}
+
+@media (max-width: 320px) {
+  html {
+    font-size: 40%;
   }
 }
