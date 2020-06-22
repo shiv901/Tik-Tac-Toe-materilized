@@ -5,6 +5,10 @@ $secondary: #1abc9c;
 $green-color: #2ecc71;
 $red-color: #c0392b;
 
+html{
+  font-size: 90%;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -48,7 +52,7 @@ h1{
     li{
       // flex: 0 0 23%;
       list-style: none;
-      padding: 5rem;
+      padding: 6rem;
       margin: 0.5rem;
       background: $primary;
       color: $secondary;
@@ -144,5 +148,23 @@ h1{
       background: $red-color;
       transform: translate(-50%,-50%) rotate(135deg);
 
+  }
+}
+
+@media (max-width:500px){
+  html{
+    font-size: 50%;
+  }
+
+  .container {
+    margin-top: 10rem;
+
+    h1{
+      font-size: 5rem;
+      padding: 3rem 0;
+    }
+    ul li{
+      padding: 7rem;
+    }
   }
 }
