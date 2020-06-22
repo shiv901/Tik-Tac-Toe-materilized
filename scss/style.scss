@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+$primary: #2c3e50;
+$secondary: #1abc9c;
+$green-color: #2ecc71;
+$red-color: #c0392b;
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: $primary;
+  color: #2c3e50;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  text-align: center;
+  color: $primary;
+  padding: 1.5rem 0;
+  font-size: 3rem;
+  font-weight: bolder;
+}
+
+.clrfix{
+  clear:both;
+}
+
+.container{
+  max-width: 600px;
+  overflow: auto;
+  background: $secondary;
+  margin: 2rem auto;
+  border-radius: 10px;
+
+  ul {
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: space-evenly;
+    // align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    
+    li{
+      // flex: 0 0 23%;
+      list-style: none;
+      padding: 5rem;
+      margin: 0.5rem;
+      background: $primary;
+      color: $secondary;
+      text-align: center;
+      font-size: 2rem;
+      border-radius: 10px;
+      transition: background 0.3s ease;
+
+      &:hover{
+        background: #333;
+      }
+    }
+  }
+  .win-screen{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba($color: #000000, $alpha: 0.95);
+
+    div {
+      font-size: 3rem;
+    }
+
+    a{
+      display: block;
+      // width: 60%;
+      padding: 0.5rem 2rem;
+      margin: 1rem auto;
+      background: $secondary;
+      color: #000;
+      text-decoration: none;
+      font-size: 2rem;
+      text-align: center;
+      border-radius: 1rem;
+      transition: 0.3s ease-in-out;
+
+      &:hover{
+        background: #333;
+        color: #fff;
+      }
+    }
+    &.show{
+      display: flex;
+    }
+  }
+}
+
+.o{
+  position: relative;
+
+  &::before{
+    content: '';
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
+    width: 50%;
+    // background: #e74c3c;
+    height: 50%;
+    border-radius: 50%; 
+    border: 0.9rem solid $green-color;
+  }
+
+}
+
+.x{
+  position: relative;
+
+  &::before{
+    content: '';
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    width: 10%;
+    height: 80%;
+    background: $red-color;
+    transform: translate(-50%,-50%) rotate(45deg);
+  }
+
+    &::after{
+      content: '';
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      width: 10%;
+       height: 80%;
+      background: $red-color;
+      transform: translate(-50%,-50%) rotate(135deg);
+
+  }
+}
